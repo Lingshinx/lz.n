@@ -57,9 +57,6 @@ end
 ---@overload fun(import: string)
 ---Register a Lua module name that contains your plugin spec(s) to be lazy-loaded.
 function M.load(spec)
-    if type(spec) == "string" then
-        spec = { import = spec }
-    end
     --- @cast spec lz.n.Spec
     local spec_mod = require("lz.n.spec")
     local plugins = spec_mod.parse(spec)
