@@ -82,7 +82,7 @@ end
 local function parse(spec)
     ---@type lz.n.Plugin
     ---@diagnostic disable-next-line: assign-type-mismatch
-    local result = vim.deepcopy(spec)
+    local result = spec
     result.name = spec[1]
     result[1] = nil
     require("lz.n.handler").parse(result, spec)

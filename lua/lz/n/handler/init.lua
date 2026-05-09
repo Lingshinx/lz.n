@@ -38,7 +38,7 @@ function M.lookup(name, opts)
         :find(function(result)
             return result ~= nil
         end)
-    return result and vim.deepcopy(result)
+    return result
 end
 
 ---@param handler lz.n.Handler
